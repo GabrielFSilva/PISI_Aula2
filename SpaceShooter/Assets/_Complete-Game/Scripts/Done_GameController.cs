@@ -31,14 +31,11 @@ public class Done_GameController : MonoBehaviour
         StartCoroutine(SpawnWaves());
     }
 
-    void Update()
+    public void Restart()
     {
         if (restart)
         {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 

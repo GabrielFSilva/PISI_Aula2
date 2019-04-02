@@ -59,7 +59,7 @@ namespace Completed
             int h = (int)(horizontal);
 
             //Get input from the input manager, round it to an integer and store in vertical to set y axis move direction
-            int v = (int)(Input.GetAxisRaw("Vertical"));
+            int v = (int)(vertical);
 
             //Check if moving horizontally, if so set vertical to zero.
             if (h != 0)

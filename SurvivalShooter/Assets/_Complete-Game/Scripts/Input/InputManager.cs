@@ -10,16 +10,19 @@ public class InputManager : MonoBehaviour
 
     public void MovePlayer(float hAxis, float vAxis)
     {
-        playerMovement.Move(hAxis, vAxis);
+        if (playerMovement != null)
+            playerMovement.Move(hAxis, vAxis);
     }
 
     public void TurnPlayer(Vector2 screenPoint)
     {
-        playerMovement.Turning(screenPoint);
+        if (playerMovement != null)
+            playerMovement.Turning(screenPoint);
     }
 
     public void SetPlayerIsShooting(bool shooting)
     {
-        playerShooting.SetShooting(shooting);
+        if (playerShooting != null)
+            playerShooting.SetShooting(shooting);
     }
 }

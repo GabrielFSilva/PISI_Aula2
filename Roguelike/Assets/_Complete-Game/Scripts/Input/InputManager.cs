@@ -9,6 +9,7 @@ public class InputManager : MonoBehaviour
     
     public void MovePlayer(float hAxis, float vAxis)
     {
-        player.Move(hAxis, vAxis);
+        if (player != null)
+            player.Move(hAxis, vAxis);
     }
 }
