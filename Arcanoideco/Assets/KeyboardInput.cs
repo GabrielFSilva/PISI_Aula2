@@ -13,7 +13,7 @@ public class KeyboardInput : MonoBehaviour
     void Update()
     {
         float xinput = Input.GetAxis("Horizontal");
-        topPaddle.SetPaddleVelocity(xinput);
-        botPaddle.SetPaddleVelocity(xinput);
+        if (topPaddle != null) topPaddle.SetPaddleVelocity(xinput);
+        if (botPaddle != null) botPaddle.SetPaddleVelocity(xinput);
     }
 }
